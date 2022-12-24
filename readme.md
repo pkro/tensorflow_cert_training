@@ -191,5 +191,18 @@ How to approach this course:
 
 Site used for coding: https://colab.research.google.com/
 
+Useful commands:
 
+`strg-enter`: run current cell
+`alt-enter`: run cell and inster new
+`strg-F9`: run all cells
+`strg-F8`: run all cells before current
+`strg-m b`: open new code cell below
+`strg-m `: run current cell
+`strg-m d`: delete cell
+`strg-m y`: convert to code cell
+`strg-m m`: convert to text cell
+
+
+Notebook with comments in colab_notebooks/00_tensorflow_fundamentals
 
