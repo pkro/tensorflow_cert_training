@@ -2,8 +2,36 @@
 
 Notes from the udemy course by "zero to mastery".
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Deep learning and TensorFlow fundamentals](#deep-learning-and-tensorflow-fundamentals)
+  - [What is deep learning](#what-is-deep-learning)
+  - [Why use deep learning](#why-use-deep-learning)
+    - [What deep learning is good for:](#what-deep-learning-is-good-for)
+    - [What deep learning is **NOT** good for:](#what-deep-learning-is-not-good-for)
+    - [ML / DL differences](#ml--dl-differences)
+    - [Common algorithms in ML and DL](#common-algorithms-in-ml-and-dl)
+  - [What are neural networks?](#what-are-neural-networks)
+    - [Steps in nn learning:](#steps-in-nn-learning)
+    - [The neural network redux](#the-neural-network-redux)
+    - [Types of learning](#types-of-learning)
+  - [What is DL already used for?](#what-is-dl-already-used-for)
+    - [Common usecases](#common-usecases)
+    - ["New" usecases and breakthroughs](#new-usecases-and-breakthroughs)
+  - [What is and why use TensorFlow?](#what-is-and-why-use-tensorflow)
+    - [What is Tensorflow?](#what-is-tensorflow)
+    - [Why TensorFlow](#why-tensorflow)
+  - [What is a Tensor?](#what-is-a-tensor)
+    - [Exkurs: Notes on Video what is a tensor? by Dan Fleisch](#exkurs-notes-on-video-what-is-a-tensor-by-dan-fleisch)
+      - [Vectors](#vectors)
+      - [Finding vector components / projecting](#finding-vector-components--projecting)
+      - [Finally: tensors](#finally-tensors)
+  - [Course information](#course-information)
+  - [Creating your first tensors](#creating-your-first-tensors)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Deep learning and TensorFlow fundamentals
 
