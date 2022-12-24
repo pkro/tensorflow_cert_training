@@ -232,5 +232,6 @@ Useful commands:
 `strg-m m`: convert to text cell
 
 
-Notebook with comments in colab_notebooks/00_tensorflow_fundamentals
+Notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)
 
+[How to export colab notebook to markdown](https://www.youtube.com/watch?v=wxUzUxQGEs4)
