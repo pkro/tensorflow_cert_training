@@ -33,6 +33,24 @@ Notes from the udemy course by "zero to mastery".
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Own notes
+
+### Setting up a nvidia GPU enabled tensorflow docker + jupyter in Linux Mint
+
+    curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+    curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+    sudo apt update
+    sudo apt install  nvidia-container-toolkit
+    
+    sudo systemctl restart docker
+    
+    docker pull tensorflow/tensorflow:latest-gpu-jupyter
+    
+    # test
+    docker run --gpus all -it --rm tensorflow/tensorflow:latest-gpu-jupyter     python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+### [How to export colab notebook to markdown](https://www.youtube.com/watch?v=wxUzUxQGEs4)
+
 ## Deep learning and TensorFlow fundamentals
 
 ### What is deep learning
@@ -215,7 +233,9 @@ How to approach this course:
 - don't overthink the process
 - Intelligence is a result of knowledge, so there's no "I can't learn it"
 
-### Creating your first tensors 
+### Section 15 - 
+
+All notes and images in notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)
 
 Site used for coding: https://colab.research.google.com/
 
@@ -231,7 +251,8 @@ Useful commands:
 `strg-m y`: convert to code cell
 `strg-m m`: convert to text cell
 
+In IntelliJ, use `esc` instead of `strg-m` for command mode.
 
-Notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)
 
-[How to export colab notebook to markdown](https://www.youtube.com/watch?v=wxUzUxQGEs4)
+
+
