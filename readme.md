@@ -6,6 +6,9 @@ Notes from the udemy course by "zero to mastery".
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
+- [Own notes](#own-notes)
+  - [Setting up a nvidia GPU enabled tensorflow docker + jupyter in Linux Mint](#setting-up-a-nvidia-gpu-enabled-tensorflow-docker--jupyter-in-linux-mint)
+  - [How to export colab notebook to markdown](#how-to-export-colab-notebook-to-markdown)
 - [Deep learning and TensorFlow fundamentals](#deep-learning-and-tensorflow-fundamentals)
   - [What is deep learning](#what-is-deep-learning)
   - [Why use deep learning](#why-use-deep-learning)
@@ -29,7 +32,7 @@ Notes from the udemy course by "zero to mastery".
       - [Finding vector components / projecting](#finding-vector-components--projecting)
       - [Finally: tensors](#finally-tensors)
   - [Course information](#course-information)
-  - [Creating your first tensors](#creating-your-first-tensors)
+  - [Section 15 -](#section-15--)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
