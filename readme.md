@@ -54,6 +54,10 @@ Notes from the udemy course by "zero to mastery".
 
 ### [How to export colab notebook to markdown](https://www.youtube.com/watch?v=wxUzUxQGEs4)
 
+### Upgrade Tensorflow version in google colab (default is 2.9.2, this upgrades currently to 2.11)
+
+`!pip install --upgrade tensorflow`
+
 ## Deep learning and TensorFlow fundamentals
 
 ### What is deep learning
@@ -236,9 +240,9 @@ How to approach this course:
 - don't overthink the process
 - Intelligence is a result of knowledge, so there's no "I can't learn it"
 
-### Section 15 - 
+### Section 15 - 37
 
-All notes and images in notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)
+**All notes and images in notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)**
 
 Site used for coding: https://colab.research.google.com/
 
@@ -253,9 +257,121 @@ Useful commands:
 `strg-m d`: delete cell
 `strg-m y`: convert to code cell
 `strg-m m`: convert to text cell
+`shift-strg-space`: show docstring
 
 In IntelliJ, use `esc` instead of `strg-m` for command mode.
 
+## Neural Network Regression with TensorFlow
+
+### Introduction 
+
+What is a regression problem?
+
+Examples:
+
+- **How much** will this house sell for?
+- **How many** people will buy this app?
+- **How much** will my health insurance be?
+- **How much** should I save each week for fuel?
+
+Regression problems predict a number of some sort (quantitative, coordinates or any other that can be turned into numbers). 
+
+>In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (often called the 'outcome' or 'response' variable, or a 'label' in machine learning parlance) and one or more independent variables (often called 'predictors', 'covariates', 'explanatory variables' or 'features').
+
+https://en.wikipedia.org/wiki/Regression_analysis
+
+Example: house price (outcome / dependent variable / label) depends on the independent variables (predictors / features / covariates) number of bedrooms, age, neighborhood etc.
+
+**What is being covered**
+
+- Architecture of a neural network regression model
+- Input and output shapes of a regression model (features and labels)
+- Creating custom data to view and fit
+- Steps in modelling
+  - Creating a model
+  - Compiling a model
+  - Fitting a model
+  - Evaluation a model
+- Different evaluation methods
+- Saving and loading models
+
+### Inputs and outputs of a neural network regression model
+
+**Example: Sale price house**
+
+Inputs:
+
+- Number of bedrooms: 4
+- Number of bathrooms: 2
+- Number of garages: 2
+
+Encoding (one-hot):
+
+```
+  1  2  3  4
+[[0, 0, 0, 1], # bedrooms
+ [0, 1, 0, 0], # bathrooms
+ [0, 1, 0, 0] # garages
+] 
+```
+
+*pkro: but why one-hot encode quantitative variables? Maybe not the best example or it will be clarified in the course later*
+
+Output: Price
+
+![regression inputs and outputs](./readme_images/regression_io.png)
+
+**Input and output shapes**
+
+Input:
+
+`[bedroom, bathroom, garage]` (Tensor of shape `[3]`)
+
+Output:
+
+`[939700]` Shape=`[1]`
+
+![regression input and output shapes](./readme_images/regression_io_shapes.png)
+
+### Anatomy and architecture of a neural network regression model
+
+**Hyperparameter: typical value**
+
+1) **Input layer shape**:        Same shape as number of features, e.g. 3 for the house example
+2) **Hidden layer(s)**:          Problem specific, min=1, max=unlimited
+3) **Neurons per hidden layer**: Problem specific, usually 10-100
+4) **Output layer shape**:       Same shape as desired prediction shape, e.g. 1 for house price
+5) **Hidden activation**:        Usually [ReLU](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/) = Rectified Linear Unit
+6) **Output activation**:        None, ReLU, logistic/tanh
+7) **Loss function**:            How wrong are the predictions? [MSE](https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/mean-squared-error/) (mean squared error), [MAE](https://www.statisticshowto.com/absolute-error/) (mean absolute error), Huber (combination) if outliers
+8) **Optimizer**:               How can we improve the predictions? [SGD](https://towardsdatascience.com/stochastic-gradient-descent-clearly-explained-53d239905d31?gi=cd3843c701e4) (stochastic gradient descent), [Adam](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
+
+Source / book recomendation: [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems](https://smile.amazon.de/gp/product/1098125975/ref=ox_sc_act_title_1?smid=A3JWKAKR8XB7XF&psc=1)
+
+In TensorFlow code:
+
+```python
+
+# Create a model (problem specific)
+model = tf.keras.Sequential([
+  tf.keras.Input(shape=(3,)), # the input layer (1)
+  tf.keras.layers.Dense(100, activation="relu"), # 3 hidden layers (2) 
+  tf.keras.layers.Dense(100, activation="relu"), # with 100 neurons (3)
+  tf.keras.layers.Dense(100, activation="relu"), # and activation (5)
+  tf.keras.layers.Dense(1, activation=None) # Output layer shape (4) with output activation (6)
+])
+
+# compile the model
+model.compile(loss=tf.keras.losses.mae, # loss function (7) - how wrong are predictions?
+              # optimizer (8) - inform neural network how to improve based on results of loss function
+              optimizer=tf.keras.optimizers.Adam(lr=0.0001), 
+              metrics=["mae"]) # loss function (again?)
+
+# fit the model - train the model with training data for 100 iterations / "laps"
+model.fit(X_train, y_train, epochs=100)
+```
+
+**Notes and code for section 41+ in Notebook [colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb](./colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb)**
 
 
 
