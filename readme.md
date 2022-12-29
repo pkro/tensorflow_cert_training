@@ -9,6 +9,7 @@ Notes from the udemy course by "zero to mastery".
 - [Own notes](#own-notes)
   - [Setting up a nvidia GPU enabled tensorflow docker + jupyter in Linux Mint](#setting-up-a-nvidia-gpu-enabled-tensorflow-docker--jupyter-in-linux-mint)
   - [How to export colab notebook to markdown](#how-to-export-colab-notebook-to-markdown)
+  - [Upgrade Tensorflow version in google colab (default is 2.9.2, this upgrades currently to 2.11)](#upgrade-tensorflow-version-in-google-colab-default-is-292-this-upgrades-currently-to-211)
 - [Deep learning and TensorFlow fundamentals](#deep-learning-and-tensorflow-fundamentals)
   - [What is deep learning](#what-is-deep-learning)
   - [Why use deep learning](#why-use-deep-learning)
@@ -32,7 +33,11 @@ Notes from the udemy course by "zero to mastery".
       - [Finding vector components / projecting](#finding-vector-components--projecting)
       - [Finally: tensors](#finally-tensors)
   - [Course information](#course-information)
-  - [Section 15 -](#section-15--)
+  - [Section 15 - 37](#section-15---37)
+- [Neural Network Regression with TensorFlow](#neural-network-regression-with-tensorflow)
+  - [Introduction](#introduction)
+  - [Inputs and outputs of a neural network regression model](#inputs-and-outputs-of-a-neural-network-regression-model)
+  - [Anatomy and architecture of a neural network regression model](#anatomy-and-architecture-of-a-neural-network-regression-model)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
