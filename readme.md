@@ -376,7 +376,7 @@ model.compile(loss=tf.keras.losses.mae, # loss function (7) - how wrong are pred
 model.fit(X_train, y_train, epochs=100)
 ```
 
-**Notes and code for section 41+ in Notebook [colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb](./colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb)**
+**Notes and code for section 41+ in Notebook [colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb](./colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb)** and **Notes and code for section 61+ in Notebook [01b_a_larger_example.ipynb](./colab_notebooks/01b_a_larger_example.ipynb)** 
 
 
 
