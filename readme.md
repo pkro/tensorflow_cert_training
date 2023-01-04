@@ -2,6 +2,8 @@
 
 Notes from the udemy course by "zero to mastery".
 
+Also notes and follow along from the book "Hands-On Machine Learning [...]" by Aurélien Géron in [handsonml](./handsonml/)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -247,7 +249,7 @@ How to approach this course:
 
 ### Section 15 - 37
 
-**All notes and images in notebook with comments for ch02 section 15 + in [colab_notebooks/00_tensorflow_fundamentals.ipynb](./colab_notebooks/00_tensorflow_fundamentals.ipynb)**
+**All notes and images in notebook with comments for ch02 section 15 + in [notebooks/00_tensorflow_fundamentals.ipynb](projects/ml/tensorflow_cert_training/notebooks/00_tensorflow_fundamentals.ipynb)**
 
 Site used for coding: https://colab.research.google.com/
 
@@ -376,7 +378,9 @@ model.compile(loss=tf.keras.losses.mae, # loss function (7) - how wrong are pred
 model.fit(X_train, y_train, epochs=100)
 ```
 
-**Notes and code for section 41+ in Notebook [colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb](./colab_notebooks/01_neural_network_regression_with_tensorflow.ipynb)** and **Notes and code for section 61+ in Notebook [01b_a_larger_example.ipynb](./colab_notebooks/01b_a_larger_example.ipynb)** 
+- **Notes and code for parts 41+ in [notebooks/01_neural_network_regression_with_tensorflow.ipynb](projects/ml/tensorflow_cert_training/notebooks/01_neural_network_regression_with_tensorflow.ipynb)**
+- **Notes and code for parts 61-end of section 3 in [01b_a_larger_example.ipynb](projects/ml/tensorflow_cert_training/notebooks/01b_a_larger_example.ipynb)**
+- **Challenges and extra curriculum in [01c_challenges_and_extra_curriculum.ipynb](projects/ml/tensorflow_cert_training/notebooks/01c_challenges_and_extra_curriculum.ipynb)**
 
 
 
